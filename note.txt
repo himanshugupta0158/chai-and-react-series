@@ -1,0 +1,34 @@
+for creating react app , we have many ways :
+1 > npx create-react-app your_app_name = this is old and heavy way to create react application, no preferred nowdays
+2 > use other libraries like vite ,parsel etc
+npm create vite@latest or npm create vite(vite with some specified version name)
+
+> For all react app, you need to make sure that component's name should have all or first letter capitalized
+> in vite with react, you need to use jsx when you try to use components but in create-react-app -> react app, does not need that
+> means required naming file's extension correctly.
+> react via vite is Framework whereas react via create-react-app is library
+> <></> this empty tag is called fragment in react.
+
+3 > That customReact folder is an attempt to create custom React itself 
+> React tries to make a tree of all our element that we use in react
+> look into this customReact folder ,it shows real react js working , go look in to it
+
+3.1 > we can use React.createElement() for doing similar things as we were doing in custom react
+3.2 > React.createElement() is used in React by default , for all defined elements
+3.3 > React.createElement() is injected by Babel behind the scene
+
+4 > In react , we use '{}' inside our tags which we define in jsx file
+like 
+function App() {
+  const username = "Himanshu Gupta !"
+
+  return (
+    <>
+    <h1>Chai aur React with vite | {username}</h1>
+    < Chai />
+    </>
+  )
+}
+
+here , '{}' this is called "expression" in react js
+and username which is used there is called "evaluation expression"
