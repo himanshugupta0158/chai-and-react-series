@@ -1,3 +1,7 @@
+Use Images from here : https://www.pexels.com/
+Use react.next js component existing one from here : https://www.devui.io/
+Read about react more here : https://github.com/acdlite/react-fiber-architecture
+
 for creating react app , we have many ways :
 1 > npx create-react-app your_app_name = this is old and heavy way to create react application, no preferred nowdays
 2 > use other libraries like vite ,parsel etc
@@ -32,3 +36,78 @@ function App() {
 
 here , '{}' this is called "expression" in react js
 and username which is used there is called "evaluation expression"
+5 > Hooks in react are used to update values of variable on UI, since even if we update them UI does not show then thats why we use Hooks in react
+some react Hooks are : useState(), useEffect(), useContext() and many more
+
+#######################################################################################
+# Important for Interviews #
+############## Virtual DOM , Fibre and Reconciliation ###############################
+#######################################################################################
+> ReactDOM method createRoot is a method which creates a DOM like (similar to what browser have) structure in react 
+> But this createRoot method of reactDOM updates/reloads only those UI which have some updates only
+> whereas, DOM of browser updates/reloads/repaints whole page, it does not matter how small or big updates taken place
+> the working of this ReactDOM method creatRoot does is what we call as VirtualDOM
+> VirtualDOM keep tracks of whole DOM in tree like structure, changes/replace those values in tree whose values get changed/updated.
+
+# for studying more on react fibre , go to this article https://github.com/acdlite/react-fiber-architecture or more
+
+> The Algorithm that works in react core is called React Fiber.
+> previous Algorithm that was working for VirtualDOM had need betterment/improvement like when our UI in react depends on API or any
+network related UI, at that if there are multiple updates for it at lag of some seconds or they came at almost instantly, then
+react UI work on implementing all of them one by one even though they works for samething, and if we waited a little we could have
+gotten last updates and not needed to update each of them
+
+and more more similar issues
+
+so, a new react core's algorithm was implemented on React called as React Fiber.
+
+> The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. 
+> Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+> Other key features include the ability to pause, abort, or reuse work as new updates come in; 
+> the ability to assign priority to different types of updates; and new concurrency primitives.
+
+> 'Hyderation' is the process of sending JS code to browser for a page, when other structure like HTML and CSS are already there
+> You may have noticed that at the start when react initialized, some button that clicked on does not seems to be working but all of
+sudden they started working, yes that was time when JS was loading there  and this process in react is called "HYDERATION".
+
+Reconciliation
+> The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+> for difference here means difference between DOM (one tree) in browser and VirtualDOM (another tree) of react 
+> Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM." ###
+update
+A change in the data used to render a React app. Usually the result of `setState`. Eventually results in a re-render.
+
+
+> Although Fiber is a ground-up rewrite of the reconciler, 
+> the high-level algorithm described in the React docs will be largely the same. 
+> The key points are:
+
+> - Different component types are assumed to generate substantially different trees. 
+> - React will not attempt to diff them, but rather replace the old tree completely.
+> - Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
+
+The key points are:
+
+> In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, 
+causing frames to drop and degrading the user experience.
+> Different types of updates have different priorities — an animation update needs to complete more quickly than, 
+say, an update from a data store.
+> A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows 
+the framework (React) to be smart and make those decisions for you.
+
+We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. 
+Specifically, we need to be able to
+
+> pause work and come back to it later.
+> assign priority to different types of work.
+> reuse previously completed work.
+>  abort work if it's no longer needed.
+
+
+After that we just need to learn props in React.
+
+THATS ALL for React FOUNDATION/LEARNING
+
+others like routing etc are extra libraries used in react.
+
