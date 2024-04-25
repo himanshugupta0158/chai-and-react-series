@@ -106,8 +106,27 @@ Specifically, we need to be able to
 
 
 After that we just need to learn props in React.
+// write about react props or properties here
 
 THATS ALL for React FOUNDATION/LEARNING
 
 others like routing etc are extra libraries used in react.
+
+useCallBack(func, [dependencies])  : 
+useCallBack is a react Hook that lets you cache a function definition
+between re-renders
+it momized/cache dependencies and optimize code
+read more here : https://react.dev/reference/react/useCallback
+
+useEffect(func, [dependencies]) : 
+if any of given dependencies changes then trigger this function in use Effect
+dependencies can be variable, or any function.
+read here : https://react.dev/reference/react/useEffect
+
+useRef : 
+it is used when we need to take reference .
+useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+const ref = useRef(initialValue)
+
+read more here : https://react.dev/reference/react/useRef
 
