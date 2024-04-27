@@ -31,7 +31,7 @@ function App() {
   const copyPasswordToClipboard = useCallback(()=>{
 
     // we will make use of passwordRef for better effect
-    passwordRef.current?.select();
+    passwordRef.current?.select(); // it will select that whole generated password
     // we can select it by range
     // passwordRef.current?.setSelectionRange(0, 3);
 

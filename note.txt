@@ -115,7 +115,7 @@ others like routing etc are extra libraries used in react.
 useCallBack(func, [dependencies])  : 
 useCallBack is a react Hook that lets you cache a function definition
 between re-renders
-it momized/cache dependencies and optimize code
+it momized/cache dependencies as much as pissible and optimize code
 read more here : https://react.dev/reference/react/useCallback
 
 useEffect(func, [dependencies]) : 
@@ -130,3 +130,8 @@ const ref = useRef(initialValue)
 
 read more here : https://react.dev/reference/react/useRef
 
+Remember key (inside tag) in loops in react
+
+useId : 
+useId is a react hook for generating unique IDs that can be passed to accessibility attributes.
+DO not use/call useId to generate keys in a lists
