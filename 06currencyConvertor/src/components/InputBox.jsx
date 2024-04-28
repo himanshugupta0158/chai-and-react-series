@@ -15,6 +15,10 @@ function InputBox({
 
     const amountInputId = useId()
 
+    if (isNaN(amount)) {
+        amount = 1;
+    }
+
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
@@ -24,10 +28,10 @@ function InputBox({
                 <input
                     id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5"
-                    type="number"
+                    type="text"
+                    value={amount}
                     placeholder="Amount"
                     disabled={amountDisable}
-                    value={amount}
                     onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
                 />
             </div>

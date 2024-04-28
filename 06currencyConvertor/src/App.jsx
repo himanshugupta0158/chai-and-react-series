@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // its by default calling index.js in components
 import { InputBox } from './components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
@@ -26,6 +26,10 @@ function App() {
     setConvertedAmount(amount * currencyInfo[to])
   }
 
+  useEffect(() => {
+    convert()
+  }, [from, to, amount, convertedAmount])
+
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
@@ -33,8 +37,20 @@ function App() {
         backgroundImage: `url('https://images.pexels.com/photos/3943717/pexels-photo-3943717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`
       }}
     >
-      <div className="w-full">
-        <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+
+      <div
+        className='flex-none w-1/2'
+        style={{
+          backgroundImage: `url('https://cdn.pixabay.com/photo/2022/11/12/10/10/ai-generated-7586650_1280.png')`,
+          backgroundSize: 'cover', // or 'contain', or specific dimensions like '100% 100%'
+          backgroundPosition: 'center', // Adjust as needed
+          width: '550px', // Fixed width
+          height: '700px', // Fixed height
+        }}
+      ></div>
+
+      <div className="w-full flex-1">
+        <div className="max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <h1 className='text-center my-2 font-extrabold'>Currency Exchanger</h1>
           <form
             onSubmit={(e) => {
@@ -77,6 +93,18 @@ function App() {
           </form>
         </div>
       </div>
+
+      <div
+        className='flex-none w-1/2'
+        style={{
+          backgroundImage: `url('https://cdn.pixabay.com/photo/2023/01/05/22/41/ai-generated-7700041_960_720.png')`,
+          backgroundSize: 'cover', // or 'contain', or specific dimensions like '100% 100%'
+          backgroundPosition: 'center', // Adjust as needed
+          width: '500px', // Fixed width
+          height: '700px', // Fixed height
+        }}
+      ></div>
+
     </div>
   );
 }
