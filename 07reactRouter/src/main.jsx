@@ -44,6 +44,8 @@ const router = createBrowserRouter(
       <Route path='contact' element={<Contact />} />
       {/* this user url will be parameterized */}
       <Route path='user/:userId' element={<User />} />
+      {/* this load here, let us load our API or function at the time when we hover over it,
+       even before useeffect or we click that page */}
       <Route
         loader={githubInfoLoader}
         path='github'
