@@ -139,3 +139,58 @@ DO not use/call useId to generate keys in a lists
 
 3rd party library used in react
 React-router learn here : https://reactrouter.com/en/main
+Router in react is used for navigating from one page/tab/component to another without refresing page. (find more better )
+
+React Router is a collection of navigational components that compose declaratively with your application. 
+It makes it easy to create UIs with complex navigation patterns without getting lost in the details.
+React Router is built on top of the powerful routing capabilities of React Native, and 
+provides a number of features that make it easy to create rich, dynamic user interfaces.
+React Router is a powerful tool that can be used to create complex, dynamic user interfaces. 
+It is easy to use and provides a number of features that make it a great choice for React applications.
+
+Here are some of the features of React Router:
+> Declarative routing:
+React Router allows you to define your routes declaratively, using a simple syntax 
+that makes it easy to understand how your application will navigate.
+
+> Nested routes:
+React Router supports nested routes, which allow you to create complex navigation hierarchies.
+
+> Dynamic routes:
+React Router supports dynamic routes, which allow you to match routes based on the current URL.
+
+> Route parameters:
+React Router allows you to pass parameters to routes, which can be used to render different content based on the current URL.
+
+> Navigation guards:
+React Router allows you to define navigation guards, which can be used to prevent users from navigating to certain routes.
+
+> Transition hooks:
+React Router allows you to define transition hooks, which can be used to run code before and after a navigation transition.
+
+
+Context API in React :
+React Context API is a built-in feature of React that allows you to share state across your app. 
+It's a lightweight alternative to external state management libraries like Redux
+
+The Context API is useful for passing data from a parent component to its descendants without prop drilling. 
+Prop drilling is the process of passing data through multiple layers of nested components, which can make 
+components less readable and difficult to maintain.
+
+The Context API is ideal for global or application-wide state, deep component nesting, and cross-component communication. 
+Some use cases for the Context API include:
+- Managing application theme
+- Managing user authentication
+- Managing localization
+- Managing routing
+- Storing and accessing user profiles
+- Keeping a shared state in sync 
+
+To use the Context API, you can:
+> Create a context object
+> Wrap components with a Provider
+> Consume the context in other components
+
+read more and understand via going to react official doc or react.dev website
+
+
