@@ -194,3 +194,15 @@ To use the Context API, you can:
 read more and understand via going to react official doc or react.dev website
 
 
+Redux ToolKit
+learn from here : https://redux-toolkit.js.org/
+
+Firstly do all required installing for redux tool via above link
+
+create redux store in react : 
+1> import configure store from redux toolkit
+like below : 
+import { configureStore } from "@reduxjs/toolkit";
+export const store = configureStore({})
+
+2> create reducer/slices
